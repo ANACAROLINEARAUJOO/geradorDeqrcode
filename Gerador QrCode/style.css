@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.comcss2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+    width: 100%;
+
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(90deg, rgb(15, 0, 22), rgb(63, 0, 88), rgb(13, 0, 26));
+}
+
+.container {
+    background-color: rgb(245, 244, 244);
+    height: 250px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+
+@media(max-width: 540px) {
+    .container {
+        width: 265px;
+        height: 250px;
+        flex-direction: column;
+    }
+
+    .container.active {
+        height: 450px;
+        gap: 20px;
+    }
+
+    .container .header-form .header h1 {
+        font-size: 2rem;
+    }
+
+    .container .header-form .header p {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+.container.active {
+    height: 500px;
+}
+
+.container.active .header h1 {
+    font-size: 2.5rem;
+}
+
+
+.header-form {
+    padding-left: 50px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container .header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.container .header p {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+.container .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .form input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 40px;
+    border-bottom: .1rem solid rgb(129, 0, 129);
+    margin-bottom: 2rem;
+}
+
+
+.container .form input::placeholder {
+    padding-left: .5rem;
+    color: black;
+}
+
+
+.container .form button {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(113, 0, 141);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container .form button:hover {
+    border: 2px solid rgb(77, 0, 128);
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.container .QrCode {
+    display: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    border: 1px solid whitesmoke;
+
+}
+
+
+.container .QrCode img {
+    width: 170px;
+
+}
+
+
+.container.active .QrCode {
+    display: block;
+    transition: all .5s .5s ease;
+}
